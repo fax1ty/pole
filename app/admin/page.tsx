@@ -9,6 +9,7 @@ export default function AdminPage() {
   const { toggle: toggleCorrectWord } = useAudio({ src: "/correct-word.mp3" });
   const { toggle: toggleWrongWord } = useAudio({ src: "/wrong-word.mp3" });
   const { toggle: toggleCar } = useAudio({ src: "/car.mp3" });
+  const { toggle: toggleSuperMinute } = useAudio({ src: "/super-minute.mp3" });
 
   return (
     <div className="flex flex-col p-4 gap-2">
@@ -19,6 +20,7 @@ export default function AdminPage() {
         { label: "Правильное слово", toggle: toggleCorrectWord },
         { label: "Не правильное слово", toggle: toggleWrongWord },
         { label: "Выиграна машина", toggle: toggleCar },
+        { label: "Минута на размышление", toggle: toggleSuperMinute },
       ].map(({ label, toggle }, i) => (
         <button
           key={i}
